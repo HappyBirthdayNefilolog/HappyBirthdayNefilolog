@@ -20,14 +20,14 @@
             justify-content:space-between;
             align-items: center;
             height: 50000px;
-            width: 50%;
+            width: 100%;
         }
         .main{
             height: 6000px;
             margin-top: 0;
             width: 100%;
             flex-direction: column;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
         }
@@ -47,14 +47,26 @@
             align-items: center;
             margin-bottom: 0;
         }
-        @media screen and (max-width: 900px) {
+        @media screen and (min-width: 1024px) {
             .full{
-                width: 100%;
+                display: none;
+            }
+            .phone{
+                display: block;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .full{
+                display: flex;
+            }
+            .phone{
+                display: none;
             }
         }
     </style>
 </head>
 <body>
+    <div class="phone">Зайди з телефону, бро</div>
     <div class="full">
         <div class="main">
         <img src="main photo.png" alt="" srcset="">
